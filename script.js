@@ -1,4 +1,4 @@
-const NICK="fluym";
+const NICK="Fluym";
 
 const question = document.getElementById("question");
 const yes = document.getElementById("yes");
