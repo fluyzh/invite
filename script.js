@@ -10,7 +10,7 @@ const tg = document.getElementById("tg");
 let noCount=0;
 
 tg.href = "https://t.me/" + NICK + "?text=" +
-    encodeURIComponent("Я согласна ! Давай выберем день");
+    encodeURIComponent("Я согласна ! Давай я выберу день");
 
 const noTexts = [
   "По моему ты не то нажала 🥺",
@@ -18,7 +18,7 @@ const noTexts = [
   "Ну полиз, нажми на другую 🙏",
   "Я же старался 😡",
   "Последний шанс передумать 😳",
-  "Ладно, а если я очень сильно попрошу? 🥺💕"
+  "Ладно, я надеялся что ты согласишься "
 ];
 
 no.addEventListener("click", function () {
@@ -35,11 +35,11 @@ function runAway() {
 }
 
 no.addEventListener("mouseover", function () {
-  if (noCount >= 1) runAway();
+  if (noCount >= 6) runAway();
 });
 
 no.addEventListener("touchstart", function (e) {
-  if (noCount >= 1) {
+  if (noCount >= 6) {
     e.preventDefault(); 
     runAway();
   }
