@@ -9,7 +9,7 @@ const tg = document.getElementById("tg");
 
 let noCount=0;
 
-tg.href="https://t.me/Fluym" + NICK + "&text="+
+tg.href = "https://t.me/" + NICK + "?text=" +
     encodeURIComponent("Я согласна ! Давай выберем день");
 
 no.addEventListener("click", function () {
