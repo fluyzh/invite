@@ -12,13 +12,20 @@ let noCount=0;
 tg.href = "https://t.me/" + NICK + "?text=" +
     encodeURIComponent("Я согласна ! Давай выберем день");
 
-no.addEventListener("click", function () {
-    noCount++;
-    if (noCount === 1) {
-        question.textContent= "По моему ты не то нажала 😡"
-    }
-});
+const noTexts = [
+  "По моему ты не то нажала 🥺",
+  "Точно? Подумай ещё разок 👀",
+  "Ну полиз, нажми на другую 🙏",
+  "Я же старался 😡",
+  "Последний шанс передумать 😳",
+  "Ладно, а если я очень сильно попрошу? 🥺💕"
+];
 
+no.addEventListener("click", function () {
+  noCount++;
+  const index = Math.min(noCount - 1, noTexts.length - 1);
+  question.textContent = noTexts[index];
+});
 function runAway() {
     const maxX = window.innerWidth - no.offsetWidth;
     const maxY = window.innerHeight - no.offsetHeight;
