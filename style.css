@@ -41,7 +41,7 @@ h1 {
 .flower {
   position: fixed;
   top: -50px;
-  pointer-events: none;      /* клики проходят сквозь цветы */
+  pointer-events: none;     
   user-select: none;
   animation: fall linear forwards;
 }
@@ -54,5 +54,5 @@ h1 {
 
 #main, #success {
   position: relative;
-  z-index: 1;                /* текст и кнопки будут поверх цветов */
+  z-index: 1;               
 }
