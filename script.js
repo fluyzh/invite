@@ -1,6 +1,8 @@
 const NICK="Fluym";
 
 const question = document.getElementById("question");
+const sound = document.getElementById("sound");
+const meme = document.getElementById("meme");
 const yes = document.getElementById("yes");
 const no = document.getElementById("no");
 const main = document.getElementById("main");
@@ -18,13 +20,24 @@ const noTexts = [
   "Ну полиз, нажми на другую 🙏",
   "Я же старался 😡",
   "Последний шанс передумать 😳",
-  "Ладно, я надеялся что ты согласишься "
+  "Ладно, я надеялся что ты согласишься😢",
+  "ну попробуй поймай <нет>😏"
+];
+const noImages = [
+  "images/no 1.gif",
+  "images/no 2.gif",
+  "images/no 3.gif",
+  "images/no 4.webp",
+  "images/no 5.gif",
+  "images/no 6.gif",
+  "images/no 7.webp"
 ];
 
 no.addEventListener("click", function () {
   noCount++;
   const index = Math.min(noCount - 1, noTexts.length - 1);
   question.textContent = noTexts[index];
+  meme.src = noImages[index];
 });
 function runAway() {
     const maxX = window.innerWidth - no.offsetWidth;
@@ -35,11 +48,11 @@ function runAway() {
 }
 
 no.addEventListener("mouseover", function () {
-  if (noCount >= 6) runAway();
+  if (noCount >= 7) runAway();
 });
 
 no.addEventListener("touchstart", function (e) {
-  if (noCount >= 6) {
+  if (noCount >= 7) {
     e.preventDefault(); 
     runAway();
   }
@@ -48,6 +61,7 @@ no.addEventListener("touchstart", function (e) {
 yes.addEventListener("click", function () {
   main.style.display = "none";
   success.style.display = "block";
+  sound.play();
 });
 
 const flowers = ["🌸", "🌷", "🌹", "🌼", "💐","🌺"];
