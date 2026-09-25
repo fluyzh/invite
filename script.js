@@ -12,7 +12,7 @@ const tg = document.getElementById("tg");
 let noCount=0;
 
 tg.href = "https://t.me/" + NICK + "?text=" +
-    encodeURIComponent("Я согласна ! Давай я выберу день");
+    encodeURIComponent("Я согласна ! я выбираю ... день");
 
 const noTexts = [
   "По моему ты не то нажала 🥺",
