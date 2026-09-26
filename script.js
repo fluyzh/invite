@@ -1,4 +1,4 @@
-const NICK="Fluym";
+const NICK="onlyaleeeeeeeh";
 
 const question = document.getElementById("question");
 const sound = document.getElementById("sound");
